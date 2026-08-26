@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-config
+  namespace: llm-gateway
+data:
+  GW_ENVIRONMENT: "production"
+  GW_LLM_PROVIDER: "auto"
+  GW_OPENAI_MODEL: "gpt-4o-mini"
+  GW_ANTHROPIC_MODEL: "claude-3-5-sonnet-20241022"
+  GW_REDIS_URL: "redis://redis:6379/0"
+  GW_BLOCK_INJECTION: "true"
+  GW_INJECTION_THRESHOLD: "0.7"
+  GW_REDACT_PII: "true"
+  GW_REDACT_RESPONSE_PII: "true"
+  GW_PII_LANGUAGES: "en"
+  GW_RATE_LIMIT_REQUESTS: "100"
+  GW_RATE_LIMIT_WINDOW_SECONDS: "60"
+  GW_SEMANTIC_CACHE_ENABLED: "true"
+  GW_SEMANTIC_CACHE_THRESHOLD: "0.92"
+  GW_SEMANTIC_CACHE_TTL: "3600"
+  GW_SEMANTIC_CACHE_MAX_ENTRIES: "500"
