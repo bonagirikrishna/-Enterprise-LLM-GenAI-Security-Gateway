@@ -1,0 +1,4 @@
+# Optional prompt-injection layer. Needs OpenAI + Pinecone accounts.
+# NOTE: Rebuff pins older openai/langchain versions — if it conflicts
+# with your other deps, skip it; the gateway falls back to heuristics.
+rebuff>=1.5.1
